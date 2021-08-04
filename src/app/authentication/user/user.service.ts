@@ -24,7 +24,7 @@ export class UserService {
     this.subjectUser.next(user);
   }
 
-  getUser(){
+  getUser() {
     return this.subjectUser.asObservable();
   }
 
