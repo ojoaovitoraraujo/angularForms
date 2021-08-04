@@ -14,4 +14,8 @@ export class NewUserService {
     return this.httpClient.post('http://localhost:3000/user/singup', newUser);
   }
 
+  checkExistUser(userName: String){
+    return this.httpClient.get(`http://localhost:3000/user/exists/${userName}`)
+  }
+
 }
