@@ -9,9 +9,9 @@ import { UserService } from 'src/app/authentication/user/user.service';
 })
 export class HeaderComponent {
 
-  user$ = this.userService.getUser();
-
   constructor(private userService: UserService, private router: Router) { }
+
+  user$ = this.userService.getUser();
 
   logout(){
     this.userService.logout();
