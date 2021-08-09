@@ -1,29 +1,20 @@
-<header class="sticky-top">
-  <nav class="navbar navbar-light bg-white px-3">
-    <a href="" class="navbar-brand">GatitoBook</a>
-
-    <!-- <div *ngIf="user$ / async as user">
+<header class="sticky-top container-fluid">
+  <nav class="navbar navbar-light bg-white">
+    <a class="navbar-brand">Gatito Book</a>
+    <div *ngIf="user$ | async as user">
       <div *ngIf="user.name; else login">
-        <i class="fa fa-user-circle mr-1"></i>
-        <a href="" class="mr-1">{{user.name}}</a>
-        <a (click)="logout()">Logout</a>
-      </div>
-    </div> -->
-
-    <div>
-      <div class="btn btn-primary ">
-        <i class="fa fa-user-circle mr-1"></i>
-        <!-- <a href="" class="mr-1">{{user.name}}</a> -->
+        <i class="fa fa-user-circle mr-1"> </i>
+        <a class="mr-1">{{ user.name }}</a>
         <a (click)="logout()">Logout</a>
       </div>
     </div>
-
   </nav>
 
   <ng-template #login>
-      <span class="navbar-text">
-        <a [routerLink] ="['']">Login</a>
-      </span>
+    <span class="navbar-text">
+      <a [routerLink]="['']">Login</a>
+    </span>
   </ng-template>
-
 </header>
+
+
