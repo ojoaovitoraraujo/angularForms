@@ -1,5 +1,5 @@
 <div *ngIf="comments$ | async as comments">
-  <ul class="list-unstyled">
+  <ul class="list-unstyled comments-list">
     <li *ngFor="let comment of comments">
       <p class="text-dark font-weight-bold">{{comment.userName}}</p>
       <em>{{comment.date | date: "dd-MM-YYYY HH:mm"}}</em>

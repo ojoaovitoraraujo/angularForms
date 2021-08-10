@@ -32,7 +32,7 @@ export class AnimalDetailComponent implements OnInit {
 
   deleteAnimal(){
     this.animalsService.deleteAnimal(this.animalId).subscribe(() => {
-      this.router.navigate(['/animais/']);
+      this.router.navigate(['/animals/']);
     },
     (error)=> {
       console.log(error);
