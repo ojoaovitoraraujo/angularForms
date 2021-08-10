@@ -1,6 +1,21 @@
 <header class="sticky-top container-fluid">
   <nav class="navbar navbar-light bg-white">
-    <a class="navbar-brand">Gatito Book</a>
+    <a class="navbar-brand">
+      <i class="fa fa-bars" (click)="menu.openMenu()" (keyup.space)="menu.openMenu()"></i>
+      Gatito Book
+    </a>
+
+    <app-menu #menu>
+      <ul class="list-unstyled">
+        <li>
+          <a [routerLink]="['animals', 'new']">New Animal</a>
+        </li>
+      </ul>
+    </app-menu>
+    <div>
+      <a [routerLink]="['animals', 'new']">New Animal</a>
+    </div>
+
     <div *ngIf="user$ | async as user">
       <div *ngIf="user.name; else login">
         <i class="fa fa-user-circle mr-1"> </i>
