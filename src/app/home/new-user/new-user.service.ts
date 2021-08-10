@@ -14,7 +14,7 @@ export class NewUserService {
 
 
   registerNewUser(newUser: NewUser) {
-    return this.httpClient.post(`${API}/user/singup`, newUser);
+    return this.httpClient.post(`${API}/user/signup`, newUser);
   }
 
   checkExistUser(userName: String){

@@ -10,6 +10,12 @@
         <i class="fa fa-comment-o fa-2x pull-left ms-3">{{animal.comments}}</i>
         <i (click)="deleteAnimal()" class="fa fa-trash-o fa-2x pull-right "></i>
       </small>
+
+      <app-comments [id]="animal.id" *ngIf="animal.allowComments; else warning"></app-comments>
+
+      <ng-template #warning>
+        <p class="text-danger">Usuário não pode comentar o animal</p>
+      </ng-template>
     </div>
   </div>
 </div>
